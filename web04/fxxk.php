@@ -11,6 +11,19 @@
 </form>
 
 <?php
+$test[] = ["face"=>"aa", "item"=>"black", "money"=>100];
+$test[] = ["face"=>"a2a", "item"=>"b2lack", "money"=>1000];
+$test[] = ["face"=>"a3a", "item"=>"b3lack", "money"=>10000];
+$test[] = ["face"=>"a4a", "item"=>"4black", "money"=>100000];
+$test[] = ["face"=>"a5a", "item"=>"b5lack", "money"=>1000000	];
+print_r($test);
+$aa = $test[2];
+$test[2] = $test[4];
+$test[4] = $aa;
+print_r($test);
+$test[3]["item"]=green; 
+print_r($test);
+
 $str=$_POST["data"];
 $str_sec = explode("\n",$str);
 
@@ -19,13 +32,35 @@ echo $str_sec[0];
 echo "<br>------------------<br>";
 $Arr=$str_sec;
 foreach($Arr as $key => $str_sec){
-	echo $str_sec;
-	echo $key;
+	$data[$key]=$str_sec;
+	
+}
+print_r($data);
+
+print_r(intval($data[0]+1));
+
+echo "<br>------------------<br>";
+$data[0]=intval($data[0]);	
+
+echo $data[$data[0] + 1];
+
+$for2=$data[0]+1;
+
+echo is_numeric($for2);
+
+for($i= 1;$i<=$data[$data[0]+1];$i++){
+	echo hello;
+	for($o=0;$o>=2;$o++){
+		$str_sec1= explode(" ",$str_sec);
+		$face[$o]=$str_sec1[0];
+		$item[$o]=$str_sec1[1];
+		$money[$o]=$str_sec1[2];
+
+
+	}
 }
 
 
-$str_sec1= explode(" ",$str_sec);
-print_r($str_sec1);
 ?> 
 
 </body>
