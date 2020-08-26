@@ -25,14 +25,6 @@ foreach($Arr as $key => $str_sec){
 
 print_r($data);
 
-for($i=0;$i<=10;$i++){
-    for($o=0;$o<=2;$o++){
-        $test[$i][$o]=$i;
-    }
-    
-}
-print_r($test);
-
 
 
 
