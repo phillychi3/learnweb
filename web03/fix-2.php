@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
     $c=($_POST["text"]);
     $d=(explode("\n",$c)); 
     for($i=1;$i<=$d[0];$i++){
-        $d[$i]=str_replace(array(" ",'-', "\r", "\n"),"",$d[$i]);
+        $d[$i]=str_replace(array(" ",'-', "\r"),"",$d[$i]);
         if(preg_match("/^([0-9]+)$/",$d[$i])){
             $s=0;
             for($j=0;$j<12;$j++){
